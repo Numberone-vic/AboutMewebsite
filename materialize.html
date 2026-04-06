@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Victor Steele - Materialize</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background-color: #f4f6f8;
+    }
+    nav {
+      background-color: #1e88e5;
+    }
+    .header-section {
+      text-align: center;
+      padding: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION (MATCHES YOUR SITE) -->
+<nav>
+  <div class="nav-wrapper container">
+    <a href="index.html" class="brand-logo">Victor Steele</a>
+    <ul class="right">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="materialize.html">Materialize</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<div class="header-section">
+  <h3>My Skills & Interests</h3>
+  <p>Exploring technology, athletics, and personal growth</p>
+</div>
+
+<div class="container">
+
+  <!-- IMAGE SECTION -->
+  <div class="row">
+    <div class="col s12 m6">
+      <img src="images/workout.jpg" class="materialboxed responsive-img">
+    </div>
+
+    <div class="col s12 m6 center-align">
+      <img src="images/profile.jpg" class="circle responsive-img" width="200">
+      <p>Focused on growth and discipline</p>
+    </div>
+  </div>
+
+  <!-- CARDS -->
+  <div class="row">
+
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Technology</span>
+          <p>Learning programming and cybersecurity concepts.</p>
+        </div>
+        <div class="card-action">
+          <a class="btn modal-trigger" href="#modal1">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Athletics</span>
+          <p>Wrestling builds discipline and mental toughness.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Growth</span>
+          <p>Always improving skills and mindset every day.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MODAL -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Technology Focus</h4>
+      <p>I am currently building skills in programming and cybersecurity to prepare for a career in tech.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close btn">Close</a>
+    </div>
+  </div>
+
+  <!-- TABLE -->
+  <h5>My Goals</h5>
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Goal</th>
+        <th>Focus Area</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Improve coding skills</td>
+        <td>Programming</td>
+      </tr>
+      <tr>
+        <td>Learn cybersecurity</td>
+        <td>Security</td>
+      </tr>
+      <tr>
+        <td>Stay in peak shape</td>
+        <td>Athletics</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- VIDEO -->
+  <div class="section">
+    <h5>Motivation & Discipline</h5>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/ZXsQAXx_ao0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="center-align">
+  <p>© 2026 Victor Steele</p>
+</footer>
+
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  M.AutoInit();
+});
+</script>
+
+</body>
+</html>
