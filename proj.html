@@ -4,7 +4,13 @@
 <head>
 <meta charset="UTF-8">
 <title>My Coding Projects</title>
+
 <link rel="stylesheet" href="style.css">
+
+<!-- Materialize -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
@@ -13,31 +19,44 @@
 <h1>My Coding Projects</h1>
 <p><b>A collection of projects I have worked on while learning programming and technology.</b></p>
 </header>
+
 <nav>
 <a href="index.html">Home</a>
 <a href="aboutme.html">About Me</a>
 <a href="proj.html">Projects</a>
 <a href="materialize.html">Materialize</a>
 </nav>
-<section>
+
+<section class="container">
 
 <h2>Introduction</h2>
 
 <p>
 This page highlights some of the programming projects I have worked on while developing my technical skills. 
-Coding allows me to solve problems creatively and build tools that people can actually use. 
-Through these projects I have practiced programming, debugging, and learning new technologies.
-</p>
-
-<p>
-As I continue learning more about computer science and software development, I plan to keep expanding my 
-portfolio with more complex applications and tools. <i>Each project helps me grow as a developer and improve 
-my understanding of technology.</i>
+Coding allows me to solve problems creatively and build tools that people can actually use.
 </p>
 
 </section>
 
-<section>
+<!-- ========================= -->
+<!-- CAROUSEL -->
+<!-- ========================= -->
+<div class="container section">
+  <h4>Project Highlights</h4>
+
+  <div class="carousel" id="projectCarousel">
+    <a class="carousel-item"><img src="https://picsum.photos/400/400?30"></a>
+    <a class="carousel-item"><img src="https://picsum.photos/400/400?31"></a>
+    <a class="carousel-item"><img src="https://picsum.photos/400/400?32"></a>
+  </div>
+
+  <br>
+
+  <button id="prevBtn" class="btn">Prev</button>
+  <button id="nextBtn" class="btn">Next</button>
+</div>
+
+<section class="container">
 
 <h2>My Projects</h2>
 
@@ -51,44 +70,100 @@ my understanding of technology.</i>
 
 <tr>
 <td>Personal Website</td>
-<td>A website built using HTML and CSS to introduce myself and showcase my work.</td>
-
-<!-- ADD MY  GITHUB LINK BELOW -->
+<td>A website built using HTML and CSS to introduce myself.</td>
 <td><a href="#">View Project</a></td>
 </tr>
 
 <tr>
 <td>Game Project</td>
 <td>A small game created while learning programming fundamentals.</td>
-
-<!-- ADD MY GITHUB LINK BELOW -->
 <td><a href="#">View Project</a></td>
 </tr>
 
 <tr>
 <td>Security Tool</td>
-<td>A project focused on learning cybersecurity concepts and system protection.</td>
+<td>A project focused on learning cybersecurity concepts.</td>
+<td><a href="#">View Project</a></td>
+</tr>
 
 </table>
 
 </section>
+
+<!-- ========================= -->
+<!-- COLLAPSIBLE -->
+<!-- ========================= -->
+<div class="container section">
+  <h4>Project Details</h4>
+
+  <ul class="collapsible">
+    <li class="active">
+      <div class="collapsible-header">
+        <i class="material-icons">code</i>
+        Skills Used
+      </div>
+      <div class="collapsible-body">
+        <span>HTML, CSS, JavaScript, and problem-solving skills.</span>
+      </div>
+    </li>
+
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons">build</i>
+        What I Learned
+      </div>
+      <div class="collapsible-body">
+        <span>Debugging, structuring code, and building functional applications.</span>
+      </div>
+    </li>
+
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons">trending_up</i>
+        Future Improvements
+      </div>
+      <div class="collapsible-body">
+        <span>I plan to build more advanced projects and real-world applications.</span>
+      </div>
+    </li>
+  </ul>
+</div>
 
 <aside>
 
 <h3>Future Projects</h3>
 
 <p>
-I plan to continue building more projects as I learn new programming languages and technologies.
-Some areas I want to explore include web applications, cybersecurity tools, and game development.
+I plan to explore web apps, cybersecurity tools, and game development.
 </p>
 
 </aside>
 
 <footer>
-
 <p>© 2026 Victor Steele | Coding Portfolio</p>
-
 </footer>
+
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Carousel
+  const carousel = document.querySelector('#projectCarousel');
+  const instance = M.Carousel.init(carousel);
+
+  document.getElementById('prevBtn').onclick = () => instance.prev();
+  document.getElementById('nextBtn').onclick = () => instance.next();
+
+  // Collapsible
+  const coll = document.querySelectorAll('.collapsible');
+  M.Collapsible.init(coll);
+
+});
+</script>
+
 <script src="script.js"></script>
+
 </body>
 </html>
