@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Steele - jQuery</title>
+
+    <!-- jQuery CDN - only linked once -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Site stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ── SCRIPT 1: Mouseenter alert ── -->
+    <script>
+        $(document).ready(function(){
+            $("#welcome-msg").mouseenter(function(){
+                alert("Welcome to Victor Steele's Site!");
+            });
+        });
+    </script>
+
+    <!-- ── SCRIPT 2: Click to hide paragraph ── -->
+    <script>
+        $(document).ready(function(){
+            $(".disappear").click(function(){
+                $(this).hide();
+            });
+        });
+    </script>
+
+    <!-- ── SCRIPT 3: Button toggles paragraphs ── -->
+    <script>
+        $(document).ready(function(){
+            $("#toggleBtn").click(function(){
+                $(".toggle-text").toggle();
+            });
+        });
+    </script>
+
+    <!-- ── SCRIPT 4: Slide up / slide down with color change ── -->
+    <script>
+        $(document).ready(function(){
+            $("#slideBtn").click(function(){
+                $("#slide-para").css("color", "#ff4d4d").slideUp(2000).slideDown(2000);
+            });
+        });
+    </script>
+
+    <!-- ── SCRIPT 5: Fade in / fade out ── -->
+    <script>
+        $(document).ready(function(){
+            $("#fadeOutBtn").click(function(){
+                $("#fade-box").fadeOut(1500);
+            });
+            $("#fadeInBtn").click(function(){
+                $("#fade-box").fadeIn(1500);
+            });
+        });
+    </script>
+
+    <style>
+        .section-label {
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #555;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        section {
+            padding: 30px;
+            margin: 0;
+            border-radius: 0;
+        }
+        section h2 {
+            margin-top: 0;
+            font-family: Arial, sans-serif;
+        }
+        section p {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        section button {
+            padding: 10px 20px;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            margin: 6px 4px;
+        }
+        section button:hover {
+            background-color: #555;
+        }
+        #fade-box {
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 20px 24px;
+            display: inline-block;
+            margin-top: 12px;
+            font-family: Arial, sans-serif;
+            color: #111;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- ── Header ── -->
+<header>
+    <h1>Victor Steele</h1>
+    <p><b>Student | Athlete | Technology Enthusiast</b></p>
+</header>
+
+<!-- ── Navigation ── -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About Me</a>
+    <a href="proj.html">Projects</a>
+    <a href="materialize.html">Materialize</a>
+    <a href="jquery.html">jQuery</a>
+</nav>
+
+
+<!-- ════════════════════════════════════════════
+     INTRO
+════════════════════════════════════════════ -->
+<section style="background-color: #1e1e1e;">
+    <h2 style="color:#ff4d4d;">jQuery Interactions</h2>
+    <p style="color:#aaa; cursor:default;">
+        This page showcases five jQuery interactions. Each colored section below
+        is a different interaction. Hover, click, and explore!
+    </p>
+    <!-- Script 1 trigger: mouseenter alert -->
+    <p id="welcome-msg" style="color:#ff4d4d; font-weight:bold; cursor:pointer;">
+        🖱️ Hover over this text for a welcome message!
+    </p>
+</section>
+
+<hr>
+
+<!-- ════════════════════════════════════════════
+     SECTION 1 – Click to Hide  (Script 2)
+════════════════════════════════════════════ -->
+<section style="background-color: #ccc3ee;">
+    <p class="section-label">Interaction 1 — Click to Hide</p>
+    <h2>Click a paragraph and it disappears!</h2>
+    <p class="disappear">🏆 I wrestled and competed at the college level. Click me!</p>
+    <p class="disappear">💻 I am studying technology and cybersecurity. Click me!</p>
+    <p class="disappear">🏙️ I grew up in Cleveland, Ohio. Click me!</p>
+    <p class="disappear">🎯 My goal is to work in the tech industry. Click me!</p>
+    <p style="font-size:13px; color:#555; cursor:default;">(Reload the page to bring them back)</p>
+</section>
+
+<hr>
+
+<!-- ════════════════════════════════════════════
+     SECTION 2 – Toggle Show / Hide  (Script 3)
+════════════════════════════════════════════ -->
+<section style="background-color: #f1a1e8;">
+    <p class="section-label">Interaction 2 — Toggle Show / Hide</p>
+    <h2>Toggle Between Hiding and Showing Content</h2>
+    <button id="toggleBtn">Toggle My Skills</button>
+
+    <p class="toggle-text">⚙️ HTML &amp; CSS — Building structured, styled web pages.</p>
+    <p class="toggle-text">⚙️ JavaScript &amp; jQuery — Adding interactivity to websites.</p>
+    <p class="toggle-text">⚙️ Cybersecurity Basics — Understanding how systems stay secure.</p>
+    <p class="toggle-text">⚙️ Python — Scripting and problem-solving with code.</p>
+</section>
+
+<hr>
+
+<!-- ════════════════════════════════════════════
+     SECTION 3 – Slide Up / Slide Down  (Script 4)
+════════════════════════════════════════════ -->
+<section style="background-color: #79f299;">
+    <p class="section-label">Interaction 3 — Slide Up &amp; Slide Down</p>
+    <h2>Watch This Slide!</h2>
+
+    <p id="slide-para">
+        🤼 Wrestling taught me that real growth only happens when you push past your limits.
+        The same mindset drives how I approach learning technology every day.
+    </p>
+
+    <button id="slideBtn">Click Me — Watch it Slide!</button>
+</section>
+
+<hr>
+
+<!-- ════════════════════════════════════════════
+     SECTION 4 – Fade Out / Fade In  (Script 5)
+════════════════════════════════════════════ -->
+<section style="background-color: #f9e4a0;">
+    <p class="section-label">Interaction 4 — Fade Out &amp; Fade In</p>
+    <h2>Fade a Card In and Out</h2>
+
+    <div id="fade-box">
+        <strong>Victor Steele</strong><br>
+        Student | Athlete | Tech Enthusiast<br>
+        <em style="font-size:13px;">Cleveland, Ohio &rarr; Miami University</em>
+    </div>
+
+    <br><br>
+    <button id="fadeOutBtn">Fade Out</button>
+    <button id="fadeInBtn">Fade In</button>
+</section>
+
+<hr>
+
+<!-- ════════════════════════════════════════════
+     CLOSING SECTION – About this page
+════════════════════════════════════════════ -->
+<section style="background-color: #1e1e1e;">
+    <h2 style="color:#ff4d4d;">About This Page</h2>
+    <p style="color:#ddd; cursor:default;">
+        This page was built as part of IMS 222. It demonstrates jQuery interactions
+        using the jQuery 3.7.1 CDN library. Each colored section above uses a
+        <code style="color:#ff4d4d;">$(document).ready()</code> script in the
+        <code style="color:#ff4d4d;">&lt;head&gt;</code> — covering mouseenter alerts,
+        click-to-hide, toggle, slide, and fade effects.
+    </p>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+    <p>© 2026 Victor Steele | Personal Website</p>
+</footer>
+
+</body>
+</html>
